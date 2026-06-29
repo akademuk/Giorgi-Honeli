@@ -60,6 +60,16 @@ h2 {
   color: var(--color-primary);
 }
 
+.header__nav-link:active,
+.header__nav-link:focus {
+  color: var(--color-primary);
+}
+
+
+.header__nav-link.is-active:hover {
+  color: var(--color-primary);
+}
+
 
 .header {
   position: fixed;
