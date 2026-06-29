@@ -416,56 +416,14 @@ function initHeroAnimation() {
 
   if (!hero) return;
 
-  const line1 = hero.querySelector('.hero__title-line:first-of-type');
-  const accent = hero.querySelector('.hero__title-accent');
-  const line3 = hero.querySelector('.hero__title-line:last-of-type');
-  const description = hero.querySelector('.hero__description');
-  const btn = hero.querySelector('.hero__btn');
-
-  if (!line1 || !accent || !line3) return;
-
-  const accentText = accent.textContent.trim();
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  const showContent = () => {
-    description?.classList.add('is-visible');
-    btn?.classList.add('is-visible');
-  };
-
-  if (reducedMotion) {
-    line1.classList.add('is-visible');
-    line3.classList.add('is-visible');
-    showContent();
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    hero.classList.add('is-animated');
     return;
   }
 
-  accent.textContent = '';
-  accent.classList.add('is-typing');
-
-  const cursor = document.createElement('span');
-  cursor.className = 'hero__typewriter-cursor';
-  cursor.setAttribute('aria-hidden', 'true');
-  accent.appendChild(cursor);
-
-  const typeText = (text, index = 0) => {
-    if (index < text.length) {
-      accent.insertBefore(document.createTextNode(text[index]), cursor);
-      setTimeout(() => typeText(text, index + 1), 70);
-      return;
-    }
-
-    accent.classList.remove('is-typing');
-    accent.classList.add('is-done');
-    setTimeout(() => {
-      line3.classList.add('is-visible');
-      setTimeout(showContent, 450);
-    }, 250);
-  };
-
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
-      line1.classList.add('is-visible');
-      setTimeout(() => typeText(accentText), 650);
+      hero.classList.add('is-animated');
     });
   });
 }

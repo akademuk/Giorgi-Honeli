@@ -443,83 +443,72 @@ body.menu-open .header {
   align-items: center;
 }
 
-.hero__title-line {
+.hero__title-line,
+.hero__title-accent {
   display: block;
-  opacity: 0;
-  transform: translate3d(-56px, 0, 0);
-  transition:
-    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.hero__title-line.is-visible {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
-
-.hero__title-line:last-of-type:not(.is-visible) {
-  position: absolute;
-  visibility: hidden;
-  pointer-events: none;
 }
 
 .hero__title-accent {
-  display: inline-block;
   color: var(--color-accent);
-  min-height: 1.1em;
-  vertical-align: top;
 }
 
-.hero__typewriter-cursor {
-  display: inline-block;
-  width: 3px;
-  height: 0.88em;
-  margin-left: 3px;
-  background: currentColor;
-  vertical-align: -0.08em;
-  animation: heroCursorBlink 0.75s step-end infinite;
+.hero__title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.hero__title-accent.is-done .hero__typewriter-cursor {
-  display: none;
-}
-
-@keyframes heroCursorBlink {
-  50% {
-    opacity: 0;
-  }
-}
-
+.hero__title-block,
 .hero__description,
 .hero__btn {
   opacity: 0;
-  transform: translate3d(0, 20px, 0);
-  transition:
-    opacity 0.55s ease,
-    transform 0.55s ease;
 }
 
-.hero__description.is-visible,
-.hero__btn.is-visible {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
+.hero.is-animated .hero__title-block {
+  animation: heroSlideLeft 1s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.hero__btn.is-visible {
-  transition-delay: 0.12s;
+.hero.is-animated .hero__description {
+  animation: heroSlideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.55s;
+}
+
+.hero.is-animated .hero__btn {
+  animation: heroSlideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.85s;
+}
+
+@keyframes heroSlideLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-80px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes heroSlideUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero__title-line,
+  .hero__title-block,
   .hero__description,
   .hero__btn {
     opacity: 1;
     transform: none;
-    transition: none;
-  }
-
-  .hero__typewriter-cursor {
-    display: none;
+    animation: none !important;
   }
 }
 
@@ -1760,6 +1749,10 @@ body.product-popup-open {
   .hero__title {
     align-items: flex-start;
     margin-bottom: 32px;
+  }
+
+  .hero__title-block {
+    align-items: flex-start;
   }
 
   .hero__description {
