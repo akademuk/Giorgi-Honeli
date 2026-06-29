@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giorgi Honeli</title>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/vendor/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/vendor/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="/" class="header__logo">
+                <img src="img/logo.svg" width="181" height="45" alt="Giorgi Honeli">
+            </a>
+
+            <nav class="header__nav" aria-label="Main navigation">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        <a href="#about" class="header__nav-link">About</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#products" class="header__nav-link">Products</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#applications" class="header__nav-link">Applications</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#faq" class="header__nav-link">FAQ</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#partnership" class="header__nav-link">Partnership</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#contacts" class="header__nav-link">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <a href="#contacts" class="header__btn">Request a Sample</a>
+
+            <div class="header__lang">
+                <button type="button" class="header__lang-toggle" id="header-lang-toggle" aria-label="Language"
+                    aria-expanded="false" aria-haspopup="listbox" aria-controls="header-lang-list">
+                    <span class="header__lang-current">EN</span>
+                    <img class="header__lang-icon" src="img/select.svg" width="6" height="5" alt="">
+                </button>
+
+                <ul class="header__lang-list" id="header-lang-list" role="listbox" aria-labelledby="header-lang-toggle">
+                    <li class="header__lang-item" role="presentation">
+                        <button type="button" class="header__lang-option is-active" role="option" aria-selected="true"
+                            data-value="en">EN</button>
+                    </li>
+                    <li class="header__lang-item" role="presentation">
+                        <button type="button" class="header__lang-option" role="option" aria-selected="false"
+                            data-value="pl">PL</button>
+                    </li>
+                    <li class="header__lang-item" role="presentation">
+                        <button type="button" class="header__lang-option" role="option" aria-selected="false"
+                            data-value="de">DE</button>
+                    </li>
+                </ul>
+            </div>
+
+            <button type="button" class="header__burger" aria-label="Open menu" aria-expanded="false"
+                aria-controls="mobile-menu">
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <section class="hero" id="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero__inner">
+                    <div class="hero__content">
+                        <h1 class="hero__title" id="hero-title">
+                            <span class="hero__title-line">Vegan &amp; Healthy</span>
+                            <span class="hero__title-accent">Food Ingredients</span>
+                            <span class="hero__title-line">Manufacturing</span>
+                        </h1>
+                        <p class="hero__description">Premium ingredients for food manufacturers, distributors and
+                            private labels worldwide.</p>
+                        <a href="#products" class="hero__btn">Explore products</a>
+                    </div>
+
+                    <figure class="hero__media">
+                        <img class="hero__image" src="img/hero.png" width="1146" height="764"
+                            alt="Assortment of vegan food ingredients">
+                    </figure>
+                    <figure class="hero__media--mobile">
+                        <img class="hero__image--mobile" src="img/hero-mobile.png" width="344" height="318"
+                            alt="Assortment of vegan food ingredients">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about" aria-labelledby="about-title">
+            <div class="container">
+
+                <div class="about__content">
+                    <h2 class="about__title" id="about-title">About Giorgi Honeli Group</h2>
+                    <div class="about__text">
+                        <p>Giorgi Honeli Group is a European supplier of innovative food ingredients and freeze-dried
+                            products for the global food industry.</p>
+                        <p>The company combines its European sales and distribution network with the manufacturing
+                            capabilities of Ledova LCC, a modern production facility located in Ukraine.</p>
+                        <p>Commissioned in early 2019, Ledova LCC is equipped with advanced processing technologies
+                            designed for primary processing of both plant-based products (fruits, berries, and
+                            vegetables) and animal-based products (meat and dairy). The facility specializes in vacuum
+                            freeze-drying technology, preserving the natural taste, nutritional value, texture, and
+                            quality of raw ingredients while significantly extending their shelf life.</p>
+                        <p>Our modern production equipment ensures consistently high product quality and full compliance
+                            with international food safety and quality standards.</p>
+                        <p>Through Giorgi Honeli Group, we provide comprehensive sales support, international logistics,
+                            and reliable customer service, ensuring efficient cooperation with partners across global
+                            markets.</p>
+                    </div>
+                </div>
+
+                <div class="about__slider swiper" aria-label="About gallery">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <figure class="about__slide">
+                                <img class="about__image" src="img/about-1.png" width="570" height="380"
+                                    alt="Giorgi Honeli Group production facility">
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="about__slide">
+                                <img class="about__image" src="img/about-2.png" width="570" height="380"
+                                    alt="Freeze-drying technology at Ledova facility">
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="about__slide">
+                                <img class="about__image" src="img/about-3.png" width="570" height="380"
+                                    alt="Processing of plant-based ingredients">
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="about__slide">
+                                <img class="about__image" src="img/about-4.png" width="570" height="380"
+                                    alt="Quality control at Giorgi Honeli Group">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="about__pagination swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products" id="products" aria-labelledby="products-title">
+            <div class="container">
+                <h2 class="products__title" id="products-title">Our Products</h2>
+
+                <div class="products__group">
+                    <h3 class="products__group-title">Functional Food Ingredients</h3>
+                    <ul class="products__list">
+                        <li class="products__item">
+                            <figure class="products__item-media">
+                                <img class="products__item-img products__item-img--default" src="img/products-1.png"
+                                    width="180" height="257" loading="lazy" alt="Aquafaba Powder">
+                                <img class="products__item-img products__item-img--hover" src="img/products-1-hover.png"
+                                    width="180" height="257" loading="lazy" alt="">
+                            </figure>
+                            <h4 class="products__item-title">Aquafaba Powder</h4>
+                        </li>
+                        <li class="products__item">
+                            <figure class="products__item-media">
+                                <img class="products__item-img products__item-img--default" src="img/products-2.png"
+                                    width="180" height="257" loading="lazy" alt="Jerusalem Artichoke Powder">
+                                <img class="products__item-img products__item-img--hover" src="img/products-2-hover.png"
+                                    width="180" height="257" loading="lazy" alt="">
+                            </figure>
+                            <h4 class="products__item-title">Jerusalem Artichoke Powder</h4>
+                        </li>
+                        <li class="products__item">
+                            <figure class="products__item-media">
+                                <img class="products__item-img products__item-img--default" src="img/products-3.png"
+                                    width="180" height="257" loading="lazy" alt="Cooked Chickpeas">
+                                <img class="products__item-img products__item-img--hover" src="img/products-3-hover.png"
+                                    width="180" height="257" loading="lazy" alt="">
+                            </figure>
+                            <h4 class="products__item-title">Cooked Chickpeas</h4>
+                        </li>
+                        <li class="products__item">
+                            <figure class="products__item-media">
+                                <img class="products__item-img products__item-img--default" src="img/products-4.png"
+                                    width="180" height="257" loading="lazy" alt="Freeze-Dried Cooked Chicken">
+                                <img class="products__item-img products__item-img--hover" src="img/products-4-hover.png"
+                                    width="180" height="257" loading="lazy" alt="">
+                            </figure>
+                            <h4 class="products__item-title">Freeze-Dried Cooked Chicken</h4>
+                        </li>
+                        <li class="products__item">
+                            <figure class="products__item-media">
+                                <img class="products__item-img products__item-img--default" src="img/products-5.png"
+                                    width="180" height="257" loading="lazy" alt="Freeze-Dried Cheeses">
+                                <img class="products__item-img products__item-img--hover" src="img/products-5-hover.png"
+                                    width="180" height="257" loading="lazy" alt="">
+                            </figure>
+                            <h4 class="products__item-title">Freeze-Dried Cheeses</h4>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="products__row">
+                    <div class="products__group--dessert">
+                        <h3 class="products__group-title">Dessert Products</h3>
+                        <ul class="products__list">
+                            <li class="products__item">
+                                <figure class="products__item-media">
+                                    <img class="products__item-img products__item-img--default" src="img/products-6.png"
+                                        width="159" height="159" loading="lazy" alt="Freeze-Dried Ice Cream">
+                                </figure>
+                                <h4 class="products__item-title">Freeze-Dried Ice Cream (Various Flavors)</h4>
+                            </li>
+                            <li class="products__item">
+                                <figure class="products__item-media">
+                                    <img class="products__item-img products__item-img--default" src="img/products-7.png"
+                                        width="159" height="159" loading="lazy" alt="Freeze-Dried Fruit Chips">
+                                </figure>
+                                <h4 class="products__item-title">Freeze-Dried Fruit Chips</h4>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="products__group--solutions">
+                        <h3 class="products__group-title">Ready-to-Eat Solutions</h3>
+                        <ul class="products__list">
+                            <li class="products__item">
+                                <figure class="products__item-media">
+                                    <img class="products__item-img products__item-img--default" src="img/products-8.png"
+                                        width="180" height="257" loading="lazy" alt="Instant Ready Meals">
+                                </figure>
+                                <h4 class="products__item-title">Instant Ready Meals</h4>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="products__footer">
+                    <img class="products__footer-icon" src="img/logo-icon.svg" width="59" height="66"
+                        alt="Giorgi Honeli">
+                    <p class="products__footer-text">We also offer private label manufacturing, allowing customers to
+                        market our products under their own brands.</p>
+                    <a href="#contacts" class="products__btn">Request a Sample</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-choose" id="why-choose" aria-labelledby="why-choose-title">
+            <div class="container">
+                <h2 class="why-choose__title" id="why-choose-title">Why Choose Giorgi Honeli Group</h2>
+
+                <div class="why-choose__inner">
+                    <div class="why-choose__mission">
+                        <h3 class="why-choose__mission-title">Our Mission</h3>
+                        <p class="why-choose__mission-text">To deliver innovative, high-quality, and environmentally responsible food ingredients while building long-term partnerships with customers around the world.</p>
+                    </div>
+
+                    <div class="why-choose__values">
+                        <h3 class="why-choose__values-title">Our Values</h3>
+                        <div class="why-choose__list">
+                            <div class="why-choose__item">
+                                <img class="why-choose__item-icon" src="img/why-choose-1.svg" width="54" height="54"
+                                    alt="">
+                                <h4 class="why-choose__item-title">Innovation</h4>
+                            </div>
+                            <div class="why-choose__item">
+                                <img class="why-choose__item-icon" src="img/why-choose-2.svg" width="54" height="54"
+                                    alt="">
+                                <h4 class="why-choose__item-title">
+                                    Quality <br> Food Safety
+                                </h4>
+                            </div>
+                            <div class="why-choose__item">
+                                <img class="why-choose__item-icon" src="img/why-choose-3.svg" width="54" height="54"
+                                    alt="">
+                                <h4 class="why-choose__item-title">Reliability <br> Stability</h4>
+                            </div>
+                            <div class="why-choose__item">
+                                <img class="why-choose__item-icon" src="img/why-choose-4.svg" width="54" height="54"
+                                    alt="">
+                                <h4 class="why-choose__item-title">
+                                    Sustainable Development
+                                </h4>
+                            </div>
+                            <div class="why-choose__item">
+                                <img class="why-choose__item-icon" src="img/why-choose-5.svg" width="54" height="54"
+                                    alt="">
+                                <h4 class="why-choose__item-title">
+                                    Advanced Processing <br> Technologies
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="applications" id="applications">
+            <div class="container">
+                <h2 class="applications__title">Applications</h2>
+
+                <div class="applications__list">
+                    <div class="applications__item">
+                        <img src="img/applications-1.svg" width="56" height="56" alt="Application 1">
+                        <div class="applications__item--content">
+                            <h3 class="applications__item-title">Food Manufacturing</h3>
+                            <p class="applications__item-text">High-quality ingredients for the production of food products, cosmetics, and pharmaceutical formulations.</p>
+                        </div>
+                    </div>
+                    <div class="applications__item">
+                        <img src="img/applications-2.svg" width="56" height="56" alt="Application 1">
+                        <div class="applications__item--content">
+                            <h3 class="applications__item-title">Plant-Based & Vegan Industry</h3>
+                            <p class="applications__item-text">Innovative ingredients for plant-based and vegan products, including ready-to-use solutions and customized formulations.</p>
+                        </div>
+                    </div>
+                    <div class="applications__item">
+                        <img src="img/applications-3.svg" width="56" height="56" alt="Application 1">
+                        <div class="applications__item--content">
+                            <h3 class="applications__item-title">Bakery & Confectionery</h3>
+                            <p class="applications__item-text">Ingredients for bakery and confectionery products, desserts, fillings, and natural food coloring applications.</p>
+                        </div>
+                    </div>
+                    <div class="applications__item">
+                        <img src="img/applications-4.svg" width="56" height="56" alt="Application 1">
+                        <div class="applications__item--content">
+                            <h3 class="applications__item-title">HoReCa & Food Service</h3>
+                            <p class="applications__item-text">Premium ingredients for sauces, desserts, beverages, cocktails, and professional catering solutions.</p>
+                        </div>
+                    </div>
+                    <div class="applications__item">
+                        <img src="img/applications-5.svg" width="56" height="56" alt="Application 1">
+                        <div class="applications__item--content">
+                            <h3 class="applications__item-title">Pet Food Industry</h3>
+                            <p class="applications__item-text">High-quality freeze-dried ingredients for the production of premium pet food and nutritious treats.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq" id="faq" aria-labelledby="faq-title">
+            <div class="container">
+                <h2 class="faq__title" id="faq-title">Frequently Asked Questions</h2>
+
+                <div class="faq__list">
+                    <div class="faq__item is-open">
+                        <h3 class="faq__question-wrap">
+                            <button type="button" class="faq__question" id="faq-question-1"
+                                aria-expanded="true" aria-controls="faq-answer-1">
+                                <span class="faq__question-text">1. What products does Giorgi Honeli Group offer?</span>
+                                <img class="faq__question-icon" src="img/faq-arrow.svg" width="24" height="24" alt="">
+                            </button>
+                        </h3>
+                        <div class="faq__answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1"
+                            aria-hidden="false">
+                            <div class="faq__answer-inner">
+                                <div class="faq__answer-content">
+                                    <p class="faq__answer-text">Our product portfolio includes Aquafaba Powder, Jerusalem Artichoke Powder, Cherry Tomato Powder, Freeze-Dried Cooked Chicken, and Freeze-Dried Cheeses.</p>
+                                    <p class="faq__answer-text">Our dessert range includes a variety of Freeze-Dried Ice Cream and Freeze-Dried Fruit Chips.</p>
+                                    <p class="faq__answer-text">We also offer Ready-to-Eat Meals.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <h3 class="faq__question-wrap">
+                            <button type="button" class="faq__question" id="faq-question-2"
+                                aria-expanded="false" aria-controls="faq-answer-2">
+                                <span class="faq__question-text">2. Where are your manufacturing facilities located?</span>
+                                <img class="faq__question-icon" src="img/faq-arrow.svg" width="24" height="24" alt="">
+                            </button>
+                        </h3>
+                        <div class="faq__answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2"
+                            aria-hidden="true">
+                            <div class="faq__answer-inner">
+                                <div class="faq__answer-content">
+                                    <p class="faq__answer-text">Our product portfolio includes Aquafaba Powder, Jerusalem Artichoke Powder, Cherry Tomato Powder, Freeze-Dried Cooked Chicken, and Freeze-Dried Cheeses.</p>
+                                    <p class="faq__answer-text">Our dessert range includes a variety of Freeze-Dried Ice Cream and Freeze-Dried Fruit Chips.</p>
+                                    <p class="faq__answer-text">We also offer Ready-to-Eat Meals.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <h3 class="faq__question-wrap">
+                            <button type="button" class="faq__question" id="faq-question-3"
+                                aria-expanded="false" aria-controls="faq-answer-3">
+                                <span class="faq__question-text">3. Which countries do you supply?</span>
+                                <img class="faq__question-icon" src="img/faq-arrow.svg" width="24" height="24" alt="">
+                            </button>
+                        </h3>
+                        <div class="faq__answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3"
+                            aria-hidden="true">
+                            <div class="faq__answer-inner">
+                                <div class="faq__answer-content">
+                                    <p class="faq__answer-text">Our product portfolio includes Aquafaba Powder, Jerusalem Artichoke Powder, Cherry Tomato Powder, Freeze-Dried Cooked Chicken, and Freeze-Dried Cheeses.</p>
+                                    <p class="faq__answer-text">Our dessert range includes a variety of Freeze-Dried Ice Cream and Freeze-Dried Fruit Chips.</p>
+                                    <p class="faq__answer-text">We also offer Ready-to-Eat Meals.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <h3 class="faq__question-wrap">
+                            <button type="button" class="faq__question" id="faq-question-4"
+                                aria-expanded="false" aria-controls="faq-answer-4">
+                                <span class="faq__question-text">4. Does your production comply with international quality standards?</span>
+                                <img class="faq__question-icon" src="img/faq-arrow.svg" width="24" height="24" alt="">
+                            </button>
+                        </h3>
+                        <div class="faq__answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4"
+                            aria-hidden="true">
+                            <div class="faq__answer-inner">
+                                <div class="faq__answer-content">
+                                    <p class="faq__answer-text">Our product portfolio includes Aquafaba Powder, Jerusalem Artichoke Powder, Cherry Tomato Powder, Freeze-Dried Cooked Chicken, and Freeze-Dried Cheeses.</p>
+                                    <p class="faq__answer-text">Our dessert range includes a variety of Freeze-Dried Ice Cream and Freeze-Dried Fruit Chips.</p>
+                                    <p class="faq__answer-text">We also offer Ready-to-Eat Meals.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <h3 class="faq__question-wrap">
+                            <button type="button" class="faq__question" id="faq-question-5"
+                                aria-expanded="false" aria-controls="faq-answer-5">
+                                <span class="faq__question-text">5. Do you provide product samples?</span>
+                                <img class="faq__question-icon" src="img/faq-arrow.svg" width="24" height="24" alt="">
+                            </button>
+                        </h3>
+                        <div class="faq__answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5"
+                            aria-hidden="true">
+                            <div class="faq__answer-inner">
+                                <div class="faq__answer-content">
+                                    <p class="faq__answer-text">Our product portfolio includes Aquafaba Powder, Jerusalem Artichoke Powder, Cherry Tomato Powder, Freeze-Dried Cooked Chicken, and Freeze-Dried Cheeses.</p>
+                                    <p class="faq__answer-text">Our dessert range includes a variety of Freeze-Dried Ice Cream and Freeze-Dried Fruit Chips.</p>
+                                    <p class="faq__answer-text">We also offer Ready-to-Eat Meals.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <h3 class="faq__question-wrap">
+                            <button type="button" class="faq__question" id="faq-question-5"
+                                aria-expanded="false" aria-controls="faq-answer-5">
+                                <span class="faq__question-text">6. Can you develop customized products?</span>
+                                <img class="faq__question-icon" src="img/faq-arrow.svg" width="24" height="24" alt="">
+                            </button>
+                        </h3>
+                        <div class="faq__answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5"
+                            aria-hidden="true">
+                            <div class="faq__answer-inner">
+                                <div class="faq__answer-content">
+                                    <p class="faq__answer-text">Our product portfolio includes Aquafaba Powder, Jerusalem Artichoke Powder, Cherry Tomato Powder, Freeze-Dried Cooked Chicken, and Freeze-Dried Cheeses.</p>
+                                    <p class="faq__answer-text">Our dessert range includes a variety of Freeze-Dried Ice Cream and Freeze-Dried Fruit Chips.</p>
+                                    <p class="faq__answer-text">We also offer Ready-to-Eat Meals.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <h3 class="faq__question-wrap">
+                            <button type="button" class="faq__question" id="faq-question-5"
+                                aria-expanded="false" aria-controls="faq-answer-5">
+                                <span class="faq__question-text">7. What is your minimum order quantity (MOQ)?</span>
+                                <img class="faq__question-icon" src="img/faq-arrow.svg" width="24" height="24" alt="">
+                            </button>
+                        </h3>
+                        <div class="faq__answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5"
+                            aria-hidden="true">
+                            <div class="faq__answer-inner">
+                                <div class="faq__answer-content">
+                                    <p class="faq__answer-text">Our product portfolio includes Aquafaba Powder, Jerusalem Artichoke Powder, Cherry Tomato Powder, Freeze-Dried Cooked Chicken, and Freeze-Dried Cheeses.</p>
+                                    <p class="faq__answer-text">Our dessert range includes a variety of Freeze-Dried Ice Cream and Freeze-Dried Fruit Chips.</p>
+                                    <p class="faq__answer-text">We also offer Ready-to-Eat Meals.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <h3 class="faq__question-wrap">
+                            <button type="button" class="faq__question" id="faq-question-5"
+                                aria-expanded="false" aria-controls="faq-answer-5">
+                                <span class="faq__question-text">8. What packaging options do you offer?</span>
+                                <img class="faq__question-icon" src="img/faq-arrow.svg" width="24" height="24" alt="">
+                            </button>
+                        </h3>
+                        <div class="faq__answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5"
+                            aria-hidden="true">
+                            <div class="faq__answer-inner">
+                                <div class="faq__answer-content">
+                                    <p class="faq__answer-text">Our product portfolio includes Aquafaba Powder, Jerusalem Artichoke Powder, Cherry Tomato Powder, Freeze-Dried Cooked Chicken, and Freeze-Dried Cheeses.</p>
+                                    <p class="faq__answer-text">Our dessert range includes a variety of Freeze-Dried Ice Cream and Freeze-Dried Fruit Chips.</p>
+                                    <p class="faq__answer-text">We also offer Ready-to-Eat Meals.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <h3 class="faq__question-wrap">
+                            <button type="button" class="faq__question" id="faq-question-5"
+                                aria-expanded="false" aria-controls="faq-answer-5">
+                                <span class="faq__question-text">9. What is the shelf life of your products?</span>
+                                <img class="faq__question-icon" src="img/faq-arrow.svg" width="24" height="24" alt="">
+                            </button>
+                        </h3>
+                        <div class="faq__answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5"
+                            aria-hidden="true">
+                            <div class="faq__answer-inner">
+                                <div class="faq__answer-content">
+                                    <p class="faq__answer-text">Our product portfolio includes Aquafaba Powder, Jerusalem Artichoke Powder, Cherry Tomato Powder, Freeze-Dried Cooked Chicken, and Freeze-Dried Cheeses.</p>
+                                    <p class="faq__answer-text">Our dessert range includes a variety of Freeze-Dried Ice Cream and Freeze-Dried Fruit Chips.</p>
+                                    <p class="faq__answer-text">We also offer Ready-to-Eat Meals.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <h3 class="faq__question-wrap">
+                            <button type="button" class="faq__question" id="faq-question-5"
+                                aria-expanded="false" aria-controls="faq-answer-5">
+                                <span class="faq__question-text">10. How can I request a quotation?</span>
+                                <img class="faq__question-icon" src="img/faq-arrow.svg" width="24" height="24" alt="">
+                            </button>
+                        </h3>
+                        <div class="faq__answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5"
+                            aria-hidden="true">
+                            <div class="faq__answer-inner">
+                                <div class="faq__answer-content">
+                                    <p class="faq__answer-text">Our product portfolio includes Aquafaba Powder, Jerusalem Artichoke Powder, Cherry Tomato Powder, Freeze-Dried Cooked Chicken, and Freeze-Dried Cheeses.</p>
+                                    <p class="faq__answer-text">Our dessert range includes a variety of Freeze-Dried Ice Cream and Freeze-Dried Fruit Chips.</p>
+                                    <p class="faq__answer-text">We also offer Ready-to-Eat Meals.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="partnership" id="partnership">
+            <div class="container">
+                <div class="partnership__content">
+                    <h2 class="partnership__title">Partnership</h2>
+                    <div class="partnership__description">
+                        <h3>European Sales Office & Global Manufacturing</h3>
+                        <div class="partnership__description-text">
+                            <p class="partnership__description-text-item">The Giorgi Honeli Group sales office is responsible for international sales, logistics, and customer support across European and global markets.</p>
+                            <p class="partnership__description-text-item">Our manufacturing operations are carried out by Ledova, located in Ukraine, where products are produced in accordance with internationally recognized food quality and safety standards.</p>
+                            <p class="partnership__description-text-item">By combining European commercial operations with advanced manufacturing expertise, we provide reliable supply solutions for food manufacturers, distributors, and private label partners worldwide.</p>
+                        </div>
+                    </div>
+                    <a href="#contacts" class="partnership__btn">Become a partner</a>
+                </div>
+                <div class="partnership__media">
+                    <img src="img/partnership.png" loading="lazy" class="partnership__media-image" width="584" height="537" alt="Partnership">
+                    <img src="img/partnership-2.png" loading="lazy" class="partnership__media-image2" width="179" height="35" alt="Partnership">
+                    <a href="#contacts" class="partnership__btn">Become a partner</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacts" id="contacts">
+            <div class="container">
+                <h2 class="contacts__title">Contacts</h2>
+
+                <div class="contacts__body">
+                    <div class="contacts__content">
+                        <ul class="contacts__list">
+                            <li class="contacts__item">
+                                <a href="tel:+48573223232" class="contacts__link">+48 573 223232</a>
+                            </li>
+                            <li class="contacts__item">
+                                <a href="tel:+491759692070" class="contacts__link">+49 175 9692070</a>
+                            </li>
+                            <li class="contacts__item">
+                                <a href="mailto:info@giorgihoneli.de" class="contacts__link">info@giorgihoneli.de</a>
+                            </li>
+                        </ul>
+                        <address>
+                            <p>Giorgi Honeli Group Sp. z o.o. <br>
+                                Michała Kleofasa Ogińskiego 11/9 <br>
+                                03-318 Warsaw <br>
+                                Poland</p>
+                        </address>
+                        <img src="img/logo2.svg" width="129" height="136" alt="Giorgi Honeli Group">
+                    </div>
+                    <form action="" class="contacts__form">
+                        <input type="text" name="name" placeholder="Name">
+                        <input type="email" name="email" placeholder="info@">
+                        <input type="tel" name="phone" placeholder="Phone">
+                        <textarea name="message" placeholder="Message"></textarea>
+                        <button type="submit" class="contacts__btn">Send</button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">2026 © Giorgi Honeli Group Sp. z o.o. <br>  All rights reserved.</p>
+
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="#" class="footer__link">
+                        <img src="img/footer-1.svg" width="36" height="36" alt="Footer 1">
+                    </a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">
+                        <img src="img/footer-2.svg" width="36" height="36" alt="Footer 2">
+                    </a>
+                </li>
+            </ul>
+
+            <div class="footer__developer">
+                <a href="/"><span>Developed</span> by Cursor</a>
+                <img src="img/cursor.svg" width="16" height="16" alt="Cursor">
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="mobile-menu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile menu">
+        <div class="modal__overlay"></div>
+
+        <div class="modal__content">
+            <div class="modal__inner" data-lenis-prevent>
+                <button type="button" class="modal__close" aria-label="Close menu"></button>
+
+                <nav class="modal__nav" aria-label="Mobile navigation">
+                    <ul class="modal__nav-list">
+                        <li class="modal__nav-item">
+                            <a href="#about" class="modal__nav-link">About</a>
+                        </li>
+                        <li class="modal__nav-item">
+                            <a href="#products" class="modal__nav-link">Products</a>
+                        </li>
+                        <li class="modal__nav-item">
+                            <a href="#applications" class="modal__nav-link">Applications</a>
+                        </li>
+                        <li class="modal__nav-item">
+                            <a href="#faq" class="modal__nav-link">FAQ</a>
+                        </li>
+                        <li class="modal__nav-item">
+                            <a href="#partnership" class="modal__nav-link">Partnership</a>
+                        </li>
+                        <li class="modal__nav-item">
+                            <a href="#contacts" class="modal__nav-link">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <a href="#contacts" class="modal__btn">Request a Sample</a>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/" class="whatsapp" target="_blank" rel="noopener noreferrer"
+        aria-label="Write us on WhatsApp">
+        <img class="whatsapp__icon" src="img/whatsapp.svg" width="60" height="60" alt="">
+    </a>
+
+    <script src="js/vendor/swiper-bundle.min.js"></script>
+    <script src="js/vendor/lenis.min.js"></script>
+    <script src="js/vendor/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
