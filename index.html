@@ -80,6 +80,11 @@
 
     <main id="main" class="main">
         <section class="hero" id="hero" aria-labelledby="hero-title">
+            <div class="hero__decor" aria-hidden="true">
+                <span class="hero__decor-blob hero__decor-blob--1"></span>
+                <span class="hero__decor-blob hero__decor-blob--2"></span>
+                <span class="hero__decor-blob hero__decor-blob--3"></span>
+            </div>
             <div class="container">
                 <div class="hero__inner">
                     <div class="hero__content">
@@ -167,21 +172,21 @@
                 <div class="products__group">
                     <h3 class="products__group-title">Functional Food Ingredients</h3>
                     <ul class="products__list">
-                        <li class="products__item">
+                        <li class="products__item products__item--video">
                             <figure class="products__item-media">
                                 <img class="products__item-img products__item-img--default" src="img/products-1.png"
                                     width="180" height="257" loading="lazy" alt="Aquafaba Powder">
-                                <img class="products__item-img products__item-img--hover" src="img/products-1-hover.png"
-                                    width="180" height="257" loading="lazy" alt="">
+                                <video class="products__item-video" src="img/products-1-hover.mp4" muted loop
+                                    playsinline preload="metadata"></video>
                             </figure>
                             <h4 class="products__item-title">Aquafaba <br> Powder</h4>
                         </li>
-                        <li class="products__item">
+                        <li class="products__item products__item--video">
                             <figure class="products__item-media">
                                 <img class="products__item-img products__item-img--default" src="img/products-2.png"
                                     width="180" height="257" loading="lazy" alt="Jerusalem Artichoke Powder">
-                                <img class="products__item-img products__item-img--hover" src="img/products-2-hover.png"
-                                    width="180" height="257" loading="lazy" alt="">
+                                <video class="products__item-video" src="img/products-2-hover.mp4" muted loop
+                                    playsinline preload="metadata"></video>
                             </figure>
                             <h4 class="products__item-title">Jerusalem Artichoke Powder</h4>
                         </li>
@@ -203,12 +208,12 @@
                             </figure>
                             <h4 class="products__item-title">Freeze-Dried Cooked Chicken</h4>
                         </li>
-                        <li class="products__item">
+                        <li class="products__item products__item--video">
                             <figure class="products__item-media">
                                 <img class="products__item-img products__item-img--default" src="img/products-5.png"
                                     width="180" height="257" loading="lazy" alt="Freeze-Dried Cheeses">
-                                <img class="products__item-img products__item-img--hover" src="img/products-5-hover.png"
-                                    width="180" height="257" loading="lazy" alt="">
+                                <video class="products__item-video" src="img/products-5-hover.mp4" muted loop
+                                    playsinline preload="metadata"></video>
                             </figure>
                             <h4 class="products__item-title">Freeze-Dried Cheeses</h4>
                         </li>
@@ -677,6 +682,33 @@
 
                 <a href="#contacts" class="modal__btn">Request a Sample</a>
             </div>
+        </div>
+    </div>
+
+    <div class="product-popup" id="product-popup" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-labelledby="product-popup-title">
+        <div class="product-popup__overlay"></div>
+
+        <div class="product-popup__content">
+            <button type="button" class="product-popup__close" aria-label="Close">
+                <img src="img/close.svg" width="24" height="24" alt="Close">
+            </button>
+            <div class="product-popup__content-body" data-lenis-prevent>
+                <div class="product-popup__media"></div>
+                <div class="product-popup__content-body--content">
+                    <h3 class="product-popup__title" id="product-popup-title"></h3>
+                    <div class="product-popup__content-body--description">
+                        <p>Our Aquafaba Powder — Premium Plant-Based Egg White Substitute.</p>
+                        <p>Our Aquafaba Powder is an innovative and completely natural vegan alternative to egg whites, made from chickpea broth without any preservatives, flavorings, or harmful additives. This clean and functional ingredient is ideal for confectionery, sauces, beverages, and vegan recipes, providing stable foam, light texture, and a natural taste.</p>
+                        <p>The product combines purity, convenience, and functionality: it's easy to store, dose, and delivers consistent performance in any recipe.</p>
+                        <p>Our Aquafaba is the choice for those creating the food of the future: clean, plant-based, and safe.</p>
+                        <p>Production is certified according to FSSC 22000 standards, ensuring quality and compliance with European regulations</p>
+                    </div>
+                    <a href="#" class="product-popup__btn">Request a Sample</a>
+                </div>
+            </div>
+            
+
         </div>
     </div>
 
