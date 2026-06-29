@@ -465,17 +465,17 @@ body.menu-open .header {
 }
 
 .hero.is-animated .hero__title-block {
-  animation: heroSlideLeft 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: heroSlideLeft 2s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .hero.is-animated .hero__description {
   animation: heroSlideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
-  animation-delay: 0.55s;
+  animation-delay: 1s;
 }
 
 .hero.is-animated .hero__btn {
   animation: heroSlideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
-  animation-delay: 0.85s;
+  animation-delay: 1.3s;
 }
 
 @keyframes heroSlideLeft {
@@ -585,7 +585,7 @@ body.menu-open .header {
 .faq,
 .partnership,
 .contacts {
-  scroll-margin-top: 78px;
+  scroll-margin-top: 62px;
 }
 
 .about {

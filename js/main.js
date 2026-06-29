@@ -24,12 +24,12 @@ function initLenis() {
   return new Lenis({ autoRaf: true });
 }
 
-function getAnchorScrollOffset(extraGap = 16) {
+function getAnchorScrollOffset() {
   const header = document.querySelector('.header');
 
-  if (!header) return extraGap;
+  if (!header) return 0;
 
-  return header.getBoundingClientRect().bottom + extraGap;
+  return header.getBoundingClientRect().bottom;
 }
 
 function scrollToAnchor(href, lenisInstance, setActiveNav) {
@@ -41,7 +41,8 @@ function scrollToAnchor(href, lenisInstance, setActiveNav) {
 
   const runScroll = () => {
     const offset = getAnchorScrollOffset();
-    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+    const fineTune = 1;
+    const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - offset + fineTune);
 
     if (lenisInstance) {
       lenisInstance.start();
