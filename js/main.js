@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initAboutSlider();
   initFaqAccordion();
   initProductsVideo();
-  initProductPopup(lenis);
   initHeroAnimation();
   initAos(lenis);
   const setActiveNav = initNavSpy(lenis);
   initBurgerMenu(lenis, setActiveNav);
+  initProductPopup(lenis, setActiveNav);
   initAnchorScroll(lenis, setActiveNav);
 });
 
@@ -31,15 +31,23 @@ function scrollToAnchor(href, lenisInstance, setActiveNav) {
 
   if (!target) return;
 
-  if (lenisInstance) {
-    lenisInstance.start();
-    lenisInstance.scrollTo(target);
-  } else {
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
+  const runScroll = () => {
+    const top = target.getBoundingClientRect().top + window.scrollY;
 
-  setActiveNav?.(href.slice(1));
-  history.pushState(null, '', href);
+    if (lenisInstance) {
+      lenisInstance.start();
+      lenisInstance.scrollTo(top);
+    } else {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    setActiveNav?.(href.slice(1));
+    history.pushState(null, '', href);
+  };
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(runScroll);
+  });
 }
 
 function initBurgerMenu(lenisInstance, setActiveNav) {
@@ -119,6 +127,7 @@ function initBurgerMenu(lenisInstance, setActiveNav) {
       const href = link.getAttribute('href');
 
       if (!href || href === '#') {
+        e.preventDefault();
         closeMenu();
         return;
       }
@@ -126,10 +135,16 @@ function initBurgerMenu(lenisInstance, setActiveNav) {
       if (!document.querySelector(href)) return;
 
       e.preventDefault();
+      e.stopPropagation();
 
-      closeMenu(() => {
-        scrollToAnchor(href, lenisInstance, setActiveNav);
-      });
+      const navigate = () => scrollToAnchor(href, lenisInstance, setActiveNav);
+
+      if (!modal.classList.contains('is-open')) {
+        navigate();
+        return;
+      }
+
+      closeMenu(navigate);
     });
   };
 
@@ -291,10 +306,11 @@ function initProductsVideo() {
   });
 }
 
-function initProductPopup(lenisInstance) {
+function initProductPopup(lenisInstance, setActiveNav) {
   const popup = document.querySelector('.product-popup');
   const overlay = popup?.querySelector('.product-popup__overlay');
   const closeBtn = popup?.querySelector('.product-popup__close');
+  const sampleBtn = popup?.querySelector('.product-popup__btn');
   const titleEl = popup?.querySelector('.product-popup__title');
   const mediaEl = popup?.querySelector('.product-popup__media');
   const scrollEl = popup?.querySelector('.product-popup__content-body');
@@ -339,12 +355,13 @@ function initProductPopup(lenisInstance) {
     lenisInstance?.stop();
   };
 
-  const close = () => {
+  const close = (onClosed) => {
     popup.classList.remove('is-open');
     document.body.classList.remove('product-popup-open');
     popup.setAttribute('aria-hidden', 'true');
     resetScroll();
     lenisInstance?.start();
+    onClosed?.();
   };
 
   items.forEach((item) => {
@@ -360,8 +377,23 @@ function initProductPopup(lenisInstance) {
     });
   });
 
-  closeBtn?.addEventListener('click', close);
-  overlay?.addEventListener('click', close);
+  closeBtn?.addEventListener('click', () => close());
+  overlay?.addEventListener('click', () => close());
+
+  sampleBtn?.addEventListener('click', (e) => {
+    const href = sampleBtn.getAttribute('href');
+
+    if (!href || href === '#') return;
+
+    if (!document.querySelector(href)) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    close(() => {
+      scrollToAnchor(href, lenisInstance, setActiveNav);
+    });
+  });
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && popup.classList.contains('is-open')) {
@@ -544,7 +576,7 @@ function initAnchorScroll(lenisInstance, setActiveNav) {
   const links = document.querySelectorAll('a[href^="#"]');
 
   links.forEach((link) => {
-    if (link.closest('.modal')) return;
+    if (link.closest('.modal') || link.closest('.product-popup')) return;
 
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');

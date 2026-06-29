@@ -938,7 +938,7 @@ body.menu-open .header {
   gap: 16px;
   color: #252525;
   text-align: justify;
-  font-size: clamp(16px, 1.6vw, 18px);
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -2157,7 +2157,7 @@ body.product-popup-open {
   }
 
   .product-popup__content-body--description {
-    gap: 24px;
+    gap: 16px;
   }
 
   .product-popup__btn {
