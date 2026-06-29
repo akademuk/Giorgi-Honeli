@@ -258,8 +258,8 @@ function initAos(lenisInstance) {
   setAos('.faq__title', 'fade-up');
   setAosStagger('.faq__item', 'fade-up', 50);
 
-  setAos('.partnership__content', 'fade-right');
-  setAos('.partnership__media', 'fade-left', 100);
+  setAos('.partnership__content', 'fade-up');
+  setAos('.partnership__media', 'fade-up', 100);
 
   setAos('.contacts__title', 'fade-up');
   setAos('.contacts__content', 'fade-up', 80);
