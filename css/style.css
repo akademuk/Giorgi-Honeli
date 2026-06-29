@@ -590,6 +590,15 @@ body.menu-open .header {
   border-color: var(--color-accent);
 }
 
+.about,
+.products,
+.applications,
+.faq,
+.partnership,
+.contacts {
+  scroll-margin-top: 78px;
+}
+
 .about {
   padding: 40px 20px;
   background: var(--color-primary);
@@ -875,7 +884,9 @@ body.menu-open .header {
 }
 
 .product-popup__media {
-  width: 320px;
+  max-width: 280px;
+  width: 100%;
+  margin: 0 auto;
   height: 420px;
 }
 
@@ -1610,6 +1621,15 @@ body.product-popup-open {
 
 
 @media (min-width: 1280px) {
+  .about,
+  .products,
+  .applications,
+  .faq,
+  .partnership,
+  .contacts {
+    scroll-margin-top: 96px;
+  }
+
   .header {
     top: 16px;
     left: 50%;
